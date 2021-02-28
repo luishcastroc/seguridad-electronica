@@ -10,7 +10,7 @@ export default function Layout({ children }) {
   // change state on scroll
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 90;
+      const isScrolled = window.scrollY > 100;
       if (isScrolled) {
         setScrolled(true);
       } else {

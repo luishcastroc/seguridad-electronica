@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 const NavItem = styled(Link)`
-  font-family: 'Lato-Bold', sans-serif;
+  font-family: 'latobold';
   text-decoration: none;
   color: var(--blue-vogue);
   display: inline-block;
@@ -20,13 +20,13 @@ const NavItem = styled(Link)`
     width: 0%;
     content: '.';
     color: transparent;
-    background: var(--blaze-orange);
+    background: var(--burnt-sienna);
     height: 1px;
     transition: all 0.4s ease-in;
   }
 
   :hover {
-    color: var(--white);
+    color: var(--burnt-sienna);
     ::after {
       width: 100%;
     }

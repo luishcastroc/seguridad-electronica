@@ -17,112 +17,28 @@ const MainStyle = styled(BackgroundImage)`
 
   .introduction {
     width: 100%;
-    height: 46rem;
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 5rem;
+    justify-content: center;
+
+    @media (orientation: portrait) {
+      padding-bottom: 20vh;
+    }
   }
 
   .title {
-    font-family: 'Lato-Bold', sans-serif;
-    font-size: 1.6rem;
+    font-family: 'latobold';
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
     margin-bottom: 1rem;
   }
 
   .subtitle {
-    font-family: 'Lato-Black', sans-serif;
-    font-size: 6rem;
-    width: 74rem;
-    margin-bottom: 1.5rem;
+    font-family: 'latoblack';
+    font-size: clamp(2.5rem, 4vw, 6rem);
+    width: 70%;
+    margin-bottom: 2rem;
   }
-
-  /* @media (width: 36.8rem) {
-    .introduction {
-      height: 25rem;
-    }
-
-    .title {
-      font-size: 1.2rem;
-    }
-
-    .subtitle {
-      font-size: 2.5rem;
-      width: 30rem;
-    }
-  }
-
-  @media (max-height: 41.4rem) and (orientation: landscape) {
-    .introduction {
-      height: 55vh;
-    }
-
-    .title {
-      font-size: 1.2rem;
-    }
-
-    .subtitle {
-      font-size: 4vw;
-      width: 60vw;
-    }
-  }
-
-  @media (max-width: 76.8rem) {
-    padding: 12rem 1rem 3rem;
-
-    .introduction {
-      height: 30rem;
-      padding: 0 5vw;
-    }
-
-    .title {
-      font-size: 1.2rem;
-    }
-
-    .subtitle {
-      font-size: 3rem;
-      width: 37.6rem;
-    }
-  }
-
-  @media (min-width: 76.9rem) and (max-width: 86rem) {
-    padding: 12rem 5vw 5rem;
-
-    .introduction {
-      height: 30rem;
-    }
-
-    .subtitle {
-      font-size: 4rem;
-      width: 51rem;
-    }
-  }
-
-  @media (min-width: 102.4rem) {
-    .introduction {
-      height: 50vh;
-    }
-
-    .title {
-      font-size: 1.8rem;
-    }
-
-    .subtitle {
-      font-size: 7rem;
-      width: 60rem;
-    }
-  }
-
-  @media (min-width: 160rem) {
-    .introduction {
-      height: 56rem;
-    }
-
-    .subtitle {
-      font-size: 7rem;
-    }
-  } */
 `;
 
 export default function Main() {

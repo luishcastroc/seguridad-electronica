@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const ButtonStyles = styled.button`
+  font-family: 'latobold';
   border-radius: 25px;
   height: 50px;
   width: 16rem;
   padding: 0.5rem;
   cursor: pointer;
-  background-color: var(--blaze-orange);
+  background-color: var(--burnt-sienna);
   border: none;
   color: var(--blue-vogue);
   box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.5);

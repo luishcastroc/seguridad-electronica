@@ -14,8 +14,11 @@ const GlobalStyles = createGlobalStyle`
     --blue-vogue: #032459;
     --blaze-orange: #FA6400;
     --cascade-70: #6790d0ed;
+    --burnt-sienna: #EE7665;
     --white: #ffffff;
     --grey: #efefef;
+    --titan-white: #ECEEFF;
+    --texas-rose: #FFB45A;
   }
 
   * {
@@ -42,11 +45,11 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--blaze-orange);
   }
 
   .link-active {
-    color: var(--white);
+    color: var(--blaze-orange);
     ::after {
       width: 100%;
       }
@@ -60,6 +63,7 @@ const GlobalStyles = createGlobalStyle`
   .pos-sticky {
     position: sticky;
     top:0;
+    background-color:var(--titan-white);
     animation: .7s ${fadeIn} ease-in;
   }
 
