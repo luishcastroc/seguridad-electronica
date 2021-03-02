@@ -15,7 +15,7 @@ const Navigation = styled.nav`
   z-index: 2;
   align-self: center;
 
-  @media (max-width: 76.8rem) {
+  @media (max-width: 768px) {
     height: 100px;
     padding: 0 5vw;
   }
@@ -27,7 +27,7 @@ const Toggle = styled.div`
   cursor: pointer;
   padding: 0 10vw;
 
-  @media (max-width: 76.8rem) {
+  @media (max-width: 768px) {
     display: flex;
     padding: 0 5vw;
   }
@@ -41,11 +41,11 @@ const Navbox = styled.div`
   align-items: center;
   font-size: 1.6rem;
 
-  @media (min-width: 160rem) {
+  @media (min-width: 1600px) {
     font-size: 1.8rem;
   }
 
-  @media (max-width: 76.8rem) {
+  @media (max-width: 768px) {
     flex-direction: column;
     position: fixed;
     width: 100%;

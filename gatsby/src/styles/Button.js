@@ -12,12 +12,13 @@ export const ButtonStyles = styled.button`
   color: var(--blue-vogue);
   box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.5);
   font-size: 1.2rem;
+  transition: 0.6s;
 
-  @media (max-width: 76.8rem) {
+  @media (max-width: 768px) {
     width: 14rem;
   }
 
-  @media (max-width: 36.8rem) {
+  @media (max-width: 368px) {
     width: 12rem;
     font-size: 1rem;
   }

@@ -32,7 +32,7 @@ const NavItem = styled(Link)`
     }
   }
 
-  @media (max-width: 76.8rem) {
+  @media (max-width: 768px) {
     padding: 1vw 0;
     z-index: 6;
   }

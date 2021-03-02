@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import BackgroundImage from 'gatsby-background-image';
+import Img from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
 import { ButtonStyles } from '../styles/Button';
@@ -13,6 +13,10 @@ const TechnologyStyles = styled.div`
   grid-template-columns: repeat(var(--columns), 1fr);
   font-family: 'latoblack';
   background-color: var(--titan-white);
+
+  @media (max-width: 720px) {
+    --columns: 1;
+  }
 `;
 
 const TextSideStyles = styled.div`
@@ -23,6 +27,11 @@ const TextSideStyles = styled.div`
   justify-content: center;
   font-size: clamp(1.2rem, 3vw, 1.8rem);
 
+  @media (max-width: 720px) {
+    order: 0;
+    padding: 0px 5vw 5rem;
+  }
+
   h1 {
     font-size: clamp(1.2rem, 3vw, 1.8rem);
     margin-bottom: 1rem;
@@ -30,7 +39,7 @@ const TextSideStyles = styled.div`
 
   h2 {
     font-size: clamp(2.5rem, 5vw, 5rem);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
     span {
       text-decoration: underline;
@@ -38,11 +47,16 @@ const TextSideStyles = styled.div`
   }
 `;
 
-const SideImageStyles = styled(BackgroundImage)`
-  margin-top: 10rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+const SideImageStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  @media (max-width: 720px) {
+    padding: 10rem 5vw 0;
+  }
 `;
 
 export default function Technology() {
@@ -64,11 +78,13 @@ export default function Technology() {
         <h1>TECNOLOGÍA</h1>
         <h2>
           DISTRIBUIDORES AUTORIZADOS DE <span>HIKVISION</span> Y{' '}
-          <span>EPCON</span>, MARCAS LÍDERES EN EL MERCADO DE SEGURIDAD.
+          <span>EPCOM</span>, MARCAS LÍDERES EN EL MERCADO DE SEGURIDAD.
         </h2>
         <ButtonStyles>CONTACTANOS</ButtonStyles>
       </TextSideStyles>
-      <SideImageStyles Tag="div" fluid={image.sharp.fluid} />
+      <SideImageStyles>
+        <Img fluid={image.sharp.fluid} />
+      </SideImageStyles>
     </TechnologyStyles>
   );
 }

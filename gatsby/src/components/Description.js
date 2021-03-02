@@ -9,15 +9,23 @@ const DescriptionStyles = styled.div`
   width: 100%;
   min-height: 100vh;
   display: grid;
-  --columns: 2;
-  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-columns: repeat(2, 1fr);
   font-family: 'latoblack';
+  position: relative;
+
+  @media (max-width: 720px) {
+    display: block;
+  }
 `;
 
 const SideImageStyles = styled(BackgroundImage)`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (max-width: 720px) {
+    height: 100vh;
+  }
 `;
 
 const TextSideStyles = styled.div`
@@ -28,6 +36,13 @@ const TextSideStyles = styled.div`
   flex-direction: column;
   justify-content: center;
   font-size: clamp(1.2rem, 3vw, 1.8rem);
+
+  @media (max-width: 720px) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, var(--texas-rose) 0%, transparent 100%);
+  }
 
   h1 {
     font-size: clamp(1.2rem, 3vw, 1.8rem);
@@ -40,7 +55,7 @@ const TextSideStyles = styled.div`
 
   p {
     font-size: clamp(1.2rem, 3vw, 1.8rem);
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
   }
 `;
 
