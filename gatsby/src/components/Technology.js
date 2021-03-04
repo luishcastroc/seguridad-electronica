@@ -28,7 +28,7 @@ const TextSideStyles = styled.div`
   font-size: clamp(1.2rem, 3vw, 1.8rem);
 
   @media (max-width: 720px) {
-    order: 0;
+    order: 2;
     padding: 0px 5vw 5rem;
   }
 

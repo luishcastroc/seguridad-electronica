@@ -12,7 +12,6 @@ const fadeIn = keyframes`
 const GlobalStyles = createGlobalStyle`
   :root {
     --blue-vogue: #032459;
-    --blaze-orange: #FA6400;
     --cascade-70: #6790d0ed;
     --burnt-sienna: #EE7665;
     --white: #ffffff;
@@ -45,11 +44,11 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: var(--blaze-orange);
+    color: var(--burnt-sienna);
   }
 
   .link-active {
-    color: var(--blaze-orange);
+    color: var(--burnt-sienna);
     ::after {
       width: 100%;
       }

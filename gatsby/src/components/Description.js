@@ -41,7 +41,7 @@ const TextSideStyles = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
-    background: linear-gradient(45deg, var(--texas-rose) 0%, transparent 100%);
+    background: linear-gradient(80deg, var(--texas-rose) 10%, transparent 110%);
   }
 
   h1 {
