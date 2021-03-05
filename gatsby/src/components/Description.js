@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { ButtonStyles } from '../styles/Button';
 
 const DescriptionStyles = styled.div`
+  margin-top: -1px;
   height: 100%;
   width: 100%;
   min-height: 100vh;
@@ -41,7 +42,11 @@ const TextSideStyles = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
-    background: linear-gradient(80deg, var(--texas-rose) 10%, transparent 110%);
+    background: linear-gradient(
+      80deg,
+      var(--texas-rose-70) 75%,
+      transparent 100%
+    );
   }
 
   h1 {

@@ -18,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
     --grey: #efefef;
     --titan-white: #ECEEFF;
     --texas-rose: #FFB45A;
+    --texas-rose-70: #FFB45A80;
   }
 
   * {
