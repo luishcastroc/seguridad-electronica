@@ -34,7 +34,7 @@ const ProjectsGrid = styled.div`
   --columns: 3;
   grid-template-columns: repeat(var(--columns), 1fr);
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   gap: 2rem;
 
   @media (max-width: 720px) {

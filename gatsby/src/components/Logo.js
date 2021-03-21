@@ -7,11 +7,7 @@ const LogoWrap = styled.div`
   ${(props) => (props.footer === 'true' ? '' : 'margin: auto 0')};
   ${(props) => (props.footer === 'true' ? '' : 'flex: 0 0 207px')};
 
-  @media (max-width: 860px) and (min-width: 769px) {
-    flex: 0 0 150px;
-  }
-
-  @media (max-width: 768px) {
+  @media (max-width: 860px) {
     flex: 0 0 150px;
   }
 `;

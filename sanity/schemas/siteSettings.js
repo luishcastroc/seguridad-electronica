@@ -31,11 +31,29 @@ export default {
       description: 'mail de contacto que será usado en el pié de página',
     },
     {
+      name: 'facebook',
+      type: 'string',
+      title: 'Facebook',
+      description: 'Facebook que será usado en el pié de página',
+    },
+    {
+      name: 'whatsapp',
+      type: 'string',
+      title: 'Whatsapp',
+      description: 'Whatsapp que será usado en el pié de página',
+    },
+    {
+      name: 'address',
+      type: 'string',
+      title: 'Dirección',
+      description: 'Dirección que será usada en el pié de página',
+    },
+    {
       name: 'projects',
       title: 'Proyectos a Mostrar',
       type: 'array',
       of: [{ type: 'reference', to: [{ type: 'project' }] }],
-      validation: (Rule) => Rule.max(6),
+      validation: (Rule) => Rule.max(3),
     },
   ],
 };
