@@ -70,7 +70,7 @@ const Hamburger = styled.div`
   ::before,
   ::after {
     width: 30px;
-    height: 3px;
+    height: 4px;
     background-color: var(--blue-vogue);
     content: '';
     position: absolute;

@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { ButtonStyles } from '../styles/Button';
 
-const DescriptionStyles = styled.div`
+const DescriptionStyles = styled.section`
   margin-top: -1px;
   height: 100%;
   width: 100%;
@@ -49,12 +49,12 @@ const TextSideStyles = styled.div`
     );
   }
 
-  h1 {
+  h2 {
     font-size: clamp(1.2rem, 3vw, 1.8rem);
     margin-bottom: 1rem;
   }
 
-  h2 {
+  h3 {
     font-size: clamp(2.5rem, 5vw, 5rem);
   }
 
@@ -81,8 +81,8 @@ export default function Description() {
     <DescriptionStyles>
       <SideImageStyles Tag="div" fluid={image.sharp.fluid} />
       <TextSideStyles>
-        <h1>PROYECTOS PERSONALIZADOS</h1>
-        <h2>COTIZAMOS, DISEÑAMOS E IMPLEMENTAMOS TU PROYECTO</h2>
+        <h2>PROYECTOS PERSONALIZADOS</h2>
+        <h3>COTIZAMOS, DISEÑAMOS E IMPLEMENTAMOS TU PROYECTO</h3>
         <p>
           Todos nuestros productos trabajan juntos para proveer máxima eficacia
           y así asegurar la entera satisfacción de nuestros clientes.

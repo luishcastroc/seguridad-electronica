@@ -49,6 +49,12 @@ export default {
       description: 'Dirección que será usada en el pié de página',
     },
     {
+      name: 'addressUrl',
+      type: 'string',
+      title: 'Url Dirección',
+      description: 'Url para Google Maps que será usada en el pié de página',
+    },
+    {
       name: 'projects',
       title: 'Proyectos a Mostrar',
       type: 'array',

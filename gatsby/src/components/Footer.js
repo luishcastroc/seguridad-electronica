@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import { FaFacebook } from 'react-icons/fa';
 import { IoLogoWhatsapp } from 'react-icons/io';
 
-const FooterStyles = styled.div`
+const FooterStyles = styled.footer`
   height: 30rem;
   background-color: var(--blue-vogue);
   padding: 2rem 5vw;
@@ -86,8 +86,8 @@ function LogoSlogan({ file }) {
         <Img fluid={file.childImageSharp.fluid} alt="logo" />
       </div>
       <div className="slogan-container">
-        <h1>TIENES UN PROYECTO?</h1>
-        <h2>HAGÁMOSLO REALIDAD</h2>
+        <h2>TIENES UN PROYECTO?</h2>
+        <h3>HAGÁMOSLO REALIDAD</h3>
       </div>
     </LogoSloganStyles>
   );
@@ -110,11 +110,11 @@ const LogoSloganStyles = styled.div`
     flex-direction: column;
     justify-content: space-between;
 
-    h1 {
+    h2 {
       font-size: 1.8rem;
     }
 
-    h2 {
+    h3 {
       font-size: clamp(2rem, 2.6vw, 3.6rem);
     }
   }
@@ -126,7 +126,10 @@ const LogoSloganStyles = styled.div`
 `;
 
 export default function Footer() {
-  const { footer, file } = useStaticQuery(graphql`
+  const {
+    footer: { phone, facebook, whatsapp, address, addressUrl },
+    file,
+  } = useStaticQuery(graphql`
     query {
       file(name: { eq: "logo-mini" }, extension: { eq: "png" }) {
         childImageSharp {
@@ -140,6 +143,7 @@ export default function Footer() {
         phone
         whatsapp
         address
+        addressUrl
       }
     }
   `);
@@ -150,14 +154,16 @@ export default function Footer() {
       <div className="info-container">
         <div className="phone">
           <span>LLÁMANOS</span>
-          <a href={`tel:${footer.phone}`}>{footer.phone}</a>
+          <a href={`tel:${phone}`} title="Teléfono">
+            {phone}
+          </a>
         </div>
         <div className="social">
           <span>CONECTATE CON NOSOTROS</span>
           <div className="icons-container">
-            {footer.facebook && (
+            {facebook && (
               <a
-                href={footer.facebook}
+                href={facebook}
                 title="Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -165,9 +171,9 @@ export default function Footer() {
                 <FaFacebook />
               </a>
             )}
-            {footer.whatsapp && (
+            {whatsapp && (
               <a
-                href={`https://wa.me/${footer.whatsapp}?text=Estoy%20interesado%20en%20un%20sistema%20de%20seguridad`}
+                href={`https://wa.me/${whatsapp}?text=Estoy%20interesado%20en%20un%20sistema%20de%20seguridad`}
                 title="Whatsapp"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -179,7 +185,16 @@ export default function Footer() {
         </div>
         <div className="address-container">
           <span>VISITANOS</span>
-          <span className="address">{footer.address}</span>
+          {whatsapp && (
+            <a
+              href={`${addressUrl}`}
+              title="Dirección"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="address">{address}</span>
+            </a>
+          )}
         </div>
       </div>
       <div className="legal">Copyright © 2021 Lhcc. All rights reserved</div>

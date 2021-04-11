@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ProjectStyles = styled.div`
-  height: 400px;
+const ProjectStyles = styled.article`
+  height: 460px;
   background-color: var(--titan-white);
   border-radius: 20px;
   padding: 2rem;

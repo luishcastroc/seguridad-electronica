@@ -11,6 +11,7 @@ const NavItem = styled(Link)`
   margin: 1vw 1vw;
   transition: all 200ms ease-in;
   position: relative;
+  --scaleX: 1;
 
   :after {
     position: absolute;
@@ -21,8 +22,9 @@ const NavItem = styled(Link)`
     content: '.';
     color: transparent;
     background: var(--burnt-sienna);
-    height: 1px;
+    height: 2px;
     transition: all 0.4s ease-in;
+    transform: skew(-20deg) rotate(1.64deg) scaleX(var(--scaleX));
   }
 
   :hover {

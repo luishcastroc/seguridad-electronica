@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { ButtonStyles } from '../styles/Button';
 
-const TechnologyStyles = styled.div`
+const TechnologyStyles = styled.section`
   height: 100%;
   width: 100%;
   min-height: 100vh;
@@ -32,16 +32,16 @@ const TextSideStyles = styled.div`
     padding: 0px 5vw 5rem;
   }
 
-  h1 {
+  h2 {
     font-size: clamp(1.2rem, 3vw, 1.8rem);
     margin-bottom: 1rem;
   }
 
-  h2 {
+  h3 {
     font-size: clamp(2.5rem, 5vw, 5rem);
     margin-bottom: 2rem;
 
-    span {
+    a {
       text-decoration: underline;
     }
   }
@@ -75,11 +75,28 @@ export default function Technology() {
   return (
     <TechnologyStyles>
       <TextSideStyles>
-        <h1>TECNOLOGÍA</h1>
-        <h2>
-          DISTRIBUIDORES AUTORIZADOS DE <span>HIKVISION</span> Y{' '}
-          <span>EPCOM</span>, MARCAS LÍDERES EN EL MERCADO DE SEGURIDAD.
-        </h2>
+        <h2>TECNOLOGÍA</h2>
+        <h3>
+          DISTRIBUIDORES AUTORIZADOS DE{' '}
+          <a
+            href="https://www.hikvision.com/"
+            title="Hikvision"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            HIKVISION
+          </a>{' '}
+          Y{' '}
+          <a
+            href="https://www.epcom.net/"
+            title="Epcom"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            EPCOM
+          </a>
+          , MARCAS LÍDERES EN EL MERCADO DE SEGURIDAD.
+        </h3>
         <ButtonStyles>CONTACTANOS</ButtonStyles>
       </TextSideStyles>
       <SideImageStyles>
